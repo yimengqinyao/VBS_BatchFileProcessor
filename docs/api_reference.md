@@ -1,291 +1,291 @@
-# API²Î¿¼ÎÄµµ - doc\api_reference.md
+# APIå‚è€ƒæ–‡æ¡£ - doc\api_reference.md
 
-## 1. È«¾Ö¶ÔÏó
+## 1. å…¨å±€å¯¹è±¡
 
 ### 1.1 fso
-**ÀàÐÍ**£ºScripting.FileSystemObject
-**ËµÃ÷**£ºÎÄ¼þÏµÍ³²Ù×÷¶ÔÏó£¬ÓÃÓÚÎÄ¼þºÍÄ¿Â¼µÄ´´½¨¡¢É¾³ý¡¢¶ÁÈ¡µÈ²Ù×÷
-**È¨ÏÞ**£ºÈ«¾Ö¿É·ÃÎÊ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šScripting.FileSystemObject
+**è¯´æ˜Ž**ï¼šæ–‡ä»¶ç³»ç»Ÿæ“ä½œå¯¹è±¡ï¼Œç”¨äºŽæ–‡ä»¶å’Œç›®å½•çš„åˆ›å»ºã€åˆ é™¤ã€è¯»å–ç­‰æ“ä½œ
+**æƒé™**ï¼šå…¨å±€å¯è®¿é—®
+**ç¤ºä¾‹**ï¼š
 If fso.FileExists(filePath) Then
-    WScript.Echo "ÎÄ¼þ´æÔÚ"
+    WScript.Echo "æ–‡ä»¶å­˜åœ¨"
 End If
 
 ### 1.2 shell
-**ÀàÐÍ**£ºWScript.Shell
-**ËµÃ÷**£ºShell²Ù×÷¶ÔÏó£¬ÓÃÓÚÖ´ÐÐÏµÍ³ÃüÁî¡¢¶ÁÈ¡»·¾³±äÁ¿µÈ
-**È¨ÏÞ**£ºÈ«¾Ö¿É·ÃÎÊ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šWScript.Shell
+**è¯´æ˜Ž**ï¼šShellæ“ä½œå¯¹è±¡ï¼Œç”¨äºŽæ‰§è¡Œç³»ç»Ÿå‘½ä»¤ã€è¯»å–çŽ¯å¢ƒå˜é‡ç­‰
+**æƒé™**ï¼šå…¨å±€å¯è®¿é—®
+**ç¤ºä¾‹**ï¼š
 shell.Run "notepad.exe"
 
 ### 1.3 wi
-**ÀàÐÍ**£ºWindowsInstaller.Installer
-**ËµÃ÷**£ºWindows Installer¶ÔÏó£¬ÓÃÓÚ¼ÆËãÎÄ¼þMD5Öµ
-**È¨ÏÞ**£ºÈ«¾Ö¿É·ÃÎÊ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šWindowsInstaller.Installer
+**è¯´æ˜Ž**ï¼šWindows Installerå¯¹è±¡ï¼Œç”¨äºŽè®¡ç®—æ–‡ä»¶MD5å€¼
+**æƒé™**ï¼šå…¨å±€å¯è®¿é—®
+**ç¤ºä¾‹**ï¼š
 Set file_hash = wi.FileHash(filePath, 0)
 
 ### 1.4 config
-**ÀàÐÍ**£ºScripting.Dictionary
-**ËµÃ÷**£ºÅäÖÃ×Öµä£¬´æ´¢´Óconfig.ini¼ÓÔØµÄÅäÖÃ²ÎÊý
-**È¨ÏÞ**£ºÈ«¾Ö¿É·ÃÎÊ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šScripting.Dictionary
+**è¯´æ˜Ž**ï¼šé…ç½®å­—å…¸ï¼Œå­˜å‚¨ä»Žconfig.iniåŠ è½½çš„é…ç½®å‚æ•°
+**æƒé™**ï¼šå…¨å±€å¯è®¿é—®
+**ç¤ºä¾‹**ï¼š
 debugLevel = CInt(config("GLOBAL_DEBUG_LEVEL"))
 
 ### 1.5 plugins
-**ÀàÐÍ**£ºScripting.Dictionary
-**ËµÃ÷**£º²å¼þ×Öµä£¬´æ´¢ËùÓÐÒÑ¼ÓÔØµÄ²å¼þ¶ÔÏó
-**È¨ÏÞ**£ºÈ«¾Ö¿É·ÃÎÊ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šScripting.Dictionary
+**è¯´æ˜Ž**ï¼šæ’ä»¶å­—å…¸ï¼Œå­˜å‚¨æ‰€æœ‰å·²åŠ è½½çš„æ’ä»¶å¯¹è±¡
+**æƒé™**ï¼šå…¨å±€å¯è®¿é—®
+**ç¤ºä¾‹**ï¼š
 If plugins.Exists("md5_calculator") Then
-    ' µ÷ÓÃMD5¼ÆËãÆ÷²å¼þ
+    ' è°ƒç”¨MD5è®¡ç®—å™¨æ’ä»¶
 End If
 
 ### 1.6 stats
-**ÀàÐÍ**£ºScripting.Dictionary
-**ËµÃ÷**£ºÍ³¼ÆÐÅÏ¢×Öµä£¬´æ´¢ÎÄ¼þÀàÐÍÍ³¼ÆµÈÐÅÏ¢
-**È¨ÏÞ**£ºÈ«¾Ö¿É·ÃÎÊ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šScripting.Dictionary
+**è¯´æ˜Ž**ï¼šç»Ÿè®¡ä¿¡æ¯å­—å…¸ï¼Œå­˜å‚¨æ–‡ä»¶ç±»åž‹ç»Ÿè®¡ç­‰ä¿¡æ¯
+**æƒé™**ï¼šå…¨å±€å¯è®¿é—®
+**ç¤ºä¾‹**ï¼š
 stats.Add "txt", 100
 
 
-## 2. ºËÐÄº¯Êý
+## 2. æ ¸å¿ƒå‡½æ•°
 
 ### 2.1 Main
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£º³ÌÐòÈë¿Úº¯Êý
-**²ÎÊý**£ºÎÞ
-**·µ»ØÖµ**£ºÎÞ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šç¨‹åºå…¥å£å‡½æ•°
+**å‚æ•°**ï¼šæ— 
+**è¿”å›žå€¼**ï¼šæ— 
+**ç¤ºä¾‹**ï¼š
 Main
 
 ### 2.2 LoadConfig
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£º¼ÓÔØÅäÖÃÎÄ¼þµ½config×Öµä
-**²ÎÊý**£ºÎÞ
-**·µ»ØÖµ**£ºÎÞ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šåŠ è½½é…ç½®æ–‡ä»¶åˆ°configå­—å…¸
+**å‚æ•°**ï¼šæ— 
+**è¿”å›žå€¼**ï¼šæ— 
+**ç¤ºä¾‹**ï¼š
 LoadConfig
 
 ### 2.3 InitLogs
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£º³õÊ¼»¯ÈÕÖ¾ÎÄ¼þ
-**²ÎÊý**£ºÎÞ
-**·µ»ØÖµ**£ºÎÞ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šåˆå§‹åŒ–æ—¥å¿—æ–‡ä»¶
+**å‚æ•°**ï¼šæ— 
+**è¿”å›žå€¼**ï¼šæ— 
+**ç¤ºä¾‹**ï¼š
 InitLogs
 
 ### 2.4 InitCache
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£º³õÊ¼»¯»º´æÏµÍ³
-**²ÎÊý**£ºÎÞ
-**·µ»ØÖµ**£ºÎÞ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šåˆå§‹åŒ–ç¼“å­˜ç³»ç»Ÿ
+**å‚æ•°**ï¼šæ— 
+**è¿”å›žå€¼**ï¼šæ— 
+**ç¤ºä¾‹**ï¼š
 InitCache
 
 ### 2.5 LoadAllPlugins
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£º¼ÓÔØËùÓÐ²å¼þ
-**²ÎÊý**£ºÎÞ
-**·µ»ØÖµ**£ºÎÞ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šåŠ è½½æ‰€æœ‰æ’ä»¶
+**å‚æ•°**ï¼šæ— 
+**è¿”å›žå€¼**ï¼šæ— 
+**ç¤ºä¾‹**ï¼š
 LoadAllPlugins
 
 ### 2.6 ExecuteMainProcess
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£ºÖ´ÐÐÖ÷´¦ÀíÁ÷³Ì
-**²ÎÊý**£ºÎÞ
-**·µ»ØÖµ**£ºÎÞ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šæ‰§è¡Œä¸»å¤„ç†æµç¨‹
+**å‚æ•°**ï¼šæ— 
+**è¿”å›žå€¼**ï¼šæ— 
+**ç¤ºä¾‹**ï¼š
 ExecuteMainProcess
 
 ### 2.7 Cleanup
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£ºÇåÀí×ÊÔ´ºÍ»º´æ
-**²ÎÊý**£ºÎÞ
-**·µ»ØÖµ**£ºÎÞ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šæ¸…ç†èµ„æºå’Œç¼“å­˜
+**å‚æ•°**ï¼šæ— 
+**è¿”å›žå€¼**ï¼šæ— 
+**ç¤ºä¾‹**ï¼š
 Cleanup
 
 ### 2.8 LogDebug
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£º¼ÇÂ¼µ÷ÊÔÈÕÖ¾
-**²ÎÊý**£º
-	message (String)£ºÈÕÖ¾ÏûÏ¢
-	level (Integer)£ºÈÕÖ¾¼¶±ð£¨0=ÎÞ£¬1=´íÎó£¬2=ÐÅÏ¢£¬3=µ÷ÊÔ£©
-**·µ»ØÖµ**£ºÎÞ
-**Ê¾Àý**£º
-LogDebug "ÎÄ¼þ´¦ÀíÍê³É", 2
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šè®°å½•è°ƒè¯•æ—¥å¿—
+**å‚æ•°**ï¼š
+	message (String)ï¼šæ—¥å¿—æ¶ˆæ¯
+	level (Integer)ï¼šæ—¥å¿—çº§åˆ«ï¼ˆ0=æ— ï¼Œ1=é”™è¯¯ï¼Œ2=ä¿¡æ¯ï¼Œ3=è°ƒè¯•ï¼‰
+**è¿”å›žå€¼**ï¼šæ— 
+**ç¤ºä¾‹**ï¼š
+LogDebug "æ–‡ä»¶å¤„ç†å®Œæˆ", 2
 
 
-## 3. ×Ô¶¨Òå¸¨Öúº¯Êý
+## 3. è‡ªå®šä¹‰è¾…åŠ©å‡½æ•°
 
 ### 3.1 IsFunction
-**ÀàÐÍ**£ºFunction
-**ËµÃ÷**£º¼ì²éÖ¸¶¨Ãû³ÆµÄº¯ÊýÊÇ·ñ´æÔÚ
-**²ÎÊý**£º
-	funcName (String)£ºÒª¼ì²éµÄº¯ÊýÃû³Æ
-**·µ»ØÖµ**£ºBoolean£¬Èç¹ûº¯Êý´æÔÚ·µ»ØTrue£¬·ñÔò·µ»ØFalse
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šFunction
+**è¯´æ˜Ž**ï¼šæ£€æŸ¥æŒ‡å®šåç§°çš„å‡½æ•°æ˜¯å¦å­˜åœ¨
+**å‚æ•°**ï¼š
+	funcName (String)ï¼šè¦æ£€æŸ¥çš„å‡½æ•°åç§°
+**è¿”å›žå€¼**ï¼šBooleanï¼Œå¦‚æžœå‡½æ•°å­˜åœ¨è¿”å›žTrueï¼Œå¦åˆ™è¿”å›žFalse
+**ç¤ºä¾‹**ï¼š
 If IsFunction("CalculateMD5") Then
-    WScript.Echo "CalculateMD5º¯Êý´æÔÚ"
+    WScript.Echo "CalculateMD5å‡½æ•°å­˜åœ¨"
 End If
 
 ### 3.2 IsSub
-**ÀàÐÍ**£ºFunction
-**ËµÃ÷**£º¼ì²éÖ¸¶¨Ãû³ÆµÄ¹ý³ÌÊÇ·ñ´æÔÚ
-**²ÎÊý**£º
-	subName (String)£ºÒª¼ì²éµÄ¹ý³ÌÃû³Æ
-**·µ»ØÖµ**£ºBoolean£¬Èç¹û¹ý³Ì´æÔÚ·µ»ØTrue£¬·ñÔò·µ»ØFalse
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šFunction
+**è¯´æ˜Ž**ï¼šæ£€æŸ¥æŒ‡å®šåç§°çš„è¿‡ç¨‹æ˜¯å¦å­˜åœ¨
+**å‚æ•°**ï¼š
+	subName (String)ï¼šè¦æ£€æŸ¥çš„è¿‡ç¨‹åç§°
+**è¿”å›žå€¼**ï¼šBooleanï¼Œå¦‚æžœè¿‡ç¨‹å­˜åœ¨è¿”å›žTrueï¼Œå¦åˆ™è¿”å›žFalse
+**ç¤ºä¾‹**ï¼š
 If IsSub("ProcessFile") Then
-    WScript.Echo "ProcessFile¹ý³Ì´æÔÚ"
+    WScript.Echo "ProcessFileè¿‡ç¨‹å­˜åœ¨"
 End If
 
 ### 3.3 GetCacheKey
-**ÀàÐÍ**£ºFunction
-**ËµÃ÷**£ºÉú³É»º´æ¼ü£¬½áºÏÎÄ¼þÂ·¾¶¡¢´óÐ¡ºÍÐÞ¸ÄÊ±¼ä
-**²ÎÊý**£º
-	filePath (String)£ºÎÄ¼þÂ·¾¶
-**·µ»ØÖµ**£ºString£¬»º´æ¼ü×Ö·û´®
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šFunction
+**è¯´æ˜Ž**ï¼šç”Ÿæˆç¼“å­˜é”®ï¼Œç»“åˆæ–‡ä»¶è·¯å¾„ã€å¤§å°å’Œä¿®æ”¹æ—¶é—´
+**å‚æ•°**ï¼š
+	filePath (String)ï¼šæ–‡ä»¶è·¯å¾„
+**è¿”å›žå€¼**ï¼šStringï¼Œç¼“å­˜é”®å­—ç¬¦ä¸²
+**ç¤ºä¾‹**ï¼š
 Dim cacheKey
 cacheKey = GetCacheKey("C:\test.txt")
 
 ### 3.4 ReadCache
-**ÀàÐÍ**£ºFunction
-**ËµÃ÷**£º´Ó»º´æÖÐ¶ÁÈ¡Öµ
-**²ÎÊý**£º
-	cacheKey (String)£º»º´æ¼ü
-	cacheFolder (String)£º»º´æÄ¿Â¼
-**·µ»ØÖµ**£ºString£¬»º´æµÄÖµ£¬Èç¹û²»´æÔÚ»ò¹ýÆÚ·µ»Ø¿Õ×Ö·û´®
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šFunction
+**è¯´æ˜Ž**ï¼šä»Žç¼“å­˜ä¸­è¯»å–å€¼
+**å‚æ•°**ï¼š
+	cacheKey (String)ï¼šç¼“å­˜é”®
+	cacheFolder (String)ï¼šç¼“å­˜ç›®å½•
+**è¿”å›žå€¼**ï¼šStringï¼Œç¼“å­˜çš„å€¼ï¼Œå¦‚æžœä¸å­˜åœ¨æˆ–è¿‡æœŸè¿”å›žç©ºå­—ç¬¦ä¸²
+**ç¤ºä¾‹**ï¼š
 Dim cachedValue
 cachedValue = ReadCache(cacheKey, "cache\")
 
 ### 3.5 WriteCache
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£º½«ÖµÐ´Èë»º´æ
-**²ÎÊý**£º
-	cacheKey (String)£º»º´æ¼ü
-	cacheValue (String)£ºÒª»º´æµÄÖµ
-	cacheFolder (String)£º»º´æÄ¿Â¼
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šå°†å€¼å†™å…¥ç¼“å­˜
+**å‚æ•°**ï¼š
+	cacheKey (String)ï¼šç¼“å­˜é”®
+	cacheValue (String)ï¼šè¦ç¼“å­˜çš„å€¼
+	cacheFolder (String)ï¼šç¼“å­˜ç›®å½•
+**ç¤ºä¾‹**ï¼š
 WriteCache(cacheKey, "d41d8cd98f00b204e9800998ecf8427e", "cache\")
 
 ### 3.6 CleanupCache
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£ºÇåÀí¹ýÆÚµÄ»º´æÎÄ¼þ
-**²ÎÊý**£º
-	cacheFolder (String)£º»º´æÄ¿Â¼
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šæ¸…ç†è¿‡æœŸçš„ç¼“å­˜æ–‡ä»¶
+**å‚æ•°**ï¼š
+	cacheFolder (String)ï¼šç¼“å­˜ç›®å½•
+**ç¤ºä¾‹**ï¼š
 CleanupCache("cache\")
 
 
-## 4. ²å¼þAPI
+## 4. æ’ä»¶API
 
-### 4.1 ²å¼þ³õÊ¼»¯
-**ÀàÐÍ**£ºFunction ¸ñÊ½£ºpluginName_Init(pluginObj)
-**ËµÃ÷**£º²å¼þ³õÊ¼»¯º¯Êý£¬Ã¿¸ö²å¼þ¶¼±ØÐëÊµÏÖ´Ëº¯Êý
-**²ÎÊý**£º
-	pluginObj (Scripting.Dictionary)£º²å¼þ¶ÔÏó×Öµä£¬ÓÃÓÚ´æ´¢²å¼þµÄÅäÖÃ¡¢º¯ÊýºÍ×´Ì¬
-**Ê¾Àý**£º
+### 4.1 æ’ä»¶åˆå§‹åŒ–
+**ç±»åž‹**ï¼šFunction æ ¼å¼ï¼špluginName_Init(pluginObj)
+**è¯´æ˜Ž**ï¼šæ’ä»¶åˆå§‹åŒ–å‡½æ•°ï¼Œæ¯ä¸ªæ’ä»¶éƒ½å¿…é¡»å®žçŽ°æ­¤å‡½æ•°
+**å‚æ•°**ï¼š
+	pluginObj (Scripting.Dictionary)ï¼šæ’ä»¶å¯¹è±¡å­—å…¸ï¼Œç”¨äºŽå­˜å‚¨æ’ä»¶çš„é…ç½®ã€å‡½æ•°å’ŒçŠ¶æ€
+**ç¤ºä¾‹**ï¼š
 Sub my_plugin_Init(pluginObj)
-    pluginObj("Name") = "ÎÒµÄ²å¼þ"
+    pluginObj("Name") = "æˆ‘çš„æ’ä»¶"
     pluginObj("Version") = "1.0"
     pluginObj("ProcessFile") = GetRef("ProcessFile")
 End Sub
 
-### 4.2 ÎÄ¼þ´¦Àíº¯Êý
-**ÀàÐÍ**£ºSub ¸ñÊ½£ºProcessFile(fileObj, pluginObj)
-**ËµÃ÷**£º´¦Àíµ¥¸öÎÄ¼þµÄº¯Êý£¬²å¼þ¿ÉÒÔÑ¡ÔñÊµÏÖ´Ëº¯Êý
-**²ÎÊý**£º
-	fileObj (Scripting.FileObject)£ºÎÄ¼þ¶ÔÏó
-	pluginObj (Scripting.Dictionary)£º²å¼þ¶ÔÏó×Öµä
-**Ê¾Àý**£º
+### 4.2 æ–‡ä»¶å¤„ç†å‡½æ•°
+**ç±»åž‹**ï¼šSub æ ¼å¼ï¼šProcessFile(fileObj, pluginObj)
+**è¯´æ˜Ž**ï¼šå¤„ç†å•ä¸ªæ–‡ä»¶çš„å‡½æ•°ï¼Œæ’ä»¶å¯ä»¥é€‰æ‹©å®žçŽ°æ­¤å‡½æ•°
+**å‚æ•°**ï¼š
+	fileObj (Scripting.FileObject)ï¼šæ–‡ä»¶å¯¹è±¡
+	pluginObj (Scripting.Dictionary)ï¼šæ’ä»¶å¯¹è±¡å­—å…¸
+**ç¤ºä¾‹**ï¼š
 Sub ProcessFile(fileObj, pluginObj)
-    ' ´¦ÀíÎÄ¼þÂß¼­
+    ' å¤„ç†æ–‡ä»¶é€»è¾‘
 End Sub
 
-### 4.3 ÇåÀíº¯Êý
-**ÀàÐÍ**£ºSub ¸ñÊ½£ºpluginName_Cleanup(pluginObj)
-**ËµÃ÷**£º²å¼þÇåÀíº¯Êý£¬ÓÃÓÚÊÍ·Å×ÊÔ´
-**²ÎÊý**£º
-	pluginObj (Scripting.Dictionary)£º²å¼þ¶ÔÏó×Öµä
-**Ê¾Àý**£º
+### 4.3 æ¸…ç†å‡½æ•°
+**ç±»åž‹**ï¼šSub æ ¼å¼ï¼špluginName_Cleanup(pluginObj)
+**è¯´æ˜Ž**ï¼šæ’ä»¶æ¸…ç†å‡½æ•°ï¼Œç”¨äºŽé‡Šæ”¾èµ„æº
+**å‚æ•°**ï¼š
+	pluginObj (Scripting.Dictionary)ï¼šæ’ä»¶å¯¹è±¡å­—å…¸
+**ç¤ºä¾‹**ï¼š
 Sub my_plugin_Cleanup(pluginObj)
-    ' ÇåÀíÂß¼­
+    ' æ¸…ç†é€»è¾‘
 End Sub
 
 
-## 5. ºËÐÄ²å¼þAPI
+## 5. æ ¸å¿ƒæ’ä»¶API
 
-### 5.1 MD5¼ÆËãÆ÷²å¼þ
+### 5.1 MD5è®¡ç®—å™¨æ’ä»¶
 
 #### 5.1.1 CalculateMD5
-**ÀàÐÍ**£ºFunction
-**ËµÃ÷**£º¼ÆËãÎÄ¼þµÄMD5Öµ
-**²ÎÊý**£º
-	filePath (String)£ºÎÄ¼þÂ·¾¶
-**·µ»ØÖµ**£ºString£¬MD5¹þÏ£Öµ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šFunction
+**è¯´æ˜Ž**ï¼šè®¡ç®—æ–‡ä»¶çš„MD5å€¼
+**å‚æ•°**ï¼š
+	filePath (String)ï¼šæ–‡ä»¶è·¯å¾„
+**è¿”å›žå€¼**ï¼šStringï¼ŒMD5å“ˆå¸Œå€¼
+**ç¤ºä¾‹**ï¼š
 Dim md5Hash
 md5Hash = CalculateMD5("C:\test.txt")
 
 #### 5.1.2 UpdateMD5Dict
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£º¸üÐÂMD5×Öµä£¬´æ´¢ÎÄ¼þÂ·¾¶ºÍMD5ÖµµÄÓ³Éä
-**²ÎÊý**£º
-	pluginObj (Scripting.Dictionary)£º²å¼þ¶ÔÏó×Öµä
-	filePath (String)£ºÎÄ¼þÂ·¾¶
-	md5Hash (String)£ºMD5¹þÏ£Öµ
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šæ›´æ–°MD5å­—å…¸ï¼Œå­˜å‚¨æ–‡ä»¶è·¯å¾„å’ŒMD5å€¼çš„æ˜ å°„
+**å‚æ•°**ï¼š
+	pluginObj (Scripting.Dictionary)ï¼šæ’ä»¶å¯¹è±¡å­—å…¸
+	filePath (String)ï¼šæ–‡ä»¶è·¯å¾„
+	md5Hash (String)ï¼šMD5å“ˆå¸Œå€¼
+**ç¤ºä¾‹**ï¼š
 UpdateMD5Dict pluginObj, "C:\test.txt", "d41d8cd98f00b204e9800998ecf8427e"
 
-### 5.2 ÎÄ¼þÉ¨Ãè²å¼þ
+### 5.2 æ–‡ä»¶æ‰«ææ’ä»¶
 
 #### 5.2.1 ProcessScan
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£ºÉ¨ÃèÄ¿±êÄ¿Â¼ÖÐµÄÎÄ¼þ
-**²ÎÊý**£º
-	pluginObj (Scripting.Dictionary)£º²å¼þ¶ÔÏó×Öµä
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šæ‰«æç›®æ ‡ç›®å½•ä¸­çš„æ–‡ä»¶
+**å‚æ•°**ï¼š
+	pluginObj (Scripting.Dictionary)ï¼šæ’ä»¶å¯¹è±¡å­—å…¸
+**ç¤ºä¾‹**ï¼š
 ProcessScan pluginObj
 
 #### 5.2.2 ScanNonRecursive
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£º·ÇµÝ¹éÉ¨ÃèÖ¸¶¨Ä¿Â¼
-**²ÎÊý**£º
-	folderPath (String)£ºÄ¿Â¼Â·¾¶
-	pluginObj (Scripting.Dictionary)£º²å¼þ¶ÔÏó×Öµä
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šéžé€’å½’æ‰«ææŒ‡å®šç›®å½•
+**å‚æ•°**ï¼š
+	folderPath (String)ï¼šç›®å½•è·¯å¾„
+	pluginObj (Scripting.Dictionary)ï¼šæ’ä»¶å¯¹è±¡å­—å…¸
+**ç¤ºä¾‹**ï¼š
 ScanNonRecursive "C:\test", pluginObj
 
 #### 5.2.3 ScanRecursive
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£ºµÝ¹éÉ¨ÃèÖ¸¶¨Ä¿Â¼¼°×ÓÄ¿Â¼
-**²ÎÊý**£º
-	folderPath (String)£ºÄ¿Â¼Â·¾¶
-	pluginObj (Scripting.Dictionary)£º²å¼þ¶ÔÏó×Öµä
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šé€’å½’æ‰«ææŒ‡å®šç›®å½•åŠå­ç›®å½•
+**å‚æ•°**ï¼š
+	folderPath (String)ï¼šç›®å½•è·¯å¾„
+	pluginObj (Scripting.Dictionary)ï¼šæ’ä»¶å¯¹è±¡å­—å…¸
+**ç¤ºä¾‹**ï¼š
 ScanRecursive "C:\test", pluginObj
 
-### 5.3 ±¨¸æÉú³É²å¼þ
+### 5.3 æŠ¥å‘Šç”Ÿæˆæ’ä»¶
 
 #### 5.3.1 GenerateReport
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£ºÉú³É´¦Àí±¨¸æ
-**²ÎÊý**£º
-	pluginObj (Scripting.Dictionary)£º²å¼þ¶ÔÏó×Öµä
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šç”Ÿæˆå¤„ç†æŠ¥å‘Š
+**å‚æ•°**ï¼š
+	pluginObj (Scripting.Dictionary)ï¼šæ’ä»¶å¯¹è±¡å­—å…¸
+**ç¤ºä¾‹**ï¼š
 GenerateReport pluginObj
 
-### 5.4 HTML±¨¸æÉú³ÉÆ÷²å¼þ
+### 5.4 HTMLæŠ¥å‘Šç”Ÿæˆå™¨æ’ä»¶
 
 #### 5.4.1 GenerateHTMLReport
-**ÀàÐÍ**£ºSub
-**ËµÃ÷**£ºÉú³É°üº¬ÖØ¸´ÎÄ¼þ¼ì²âµÄHTML±¨¸æ
-**²ÎÊý**£º
-	pluginObj (Scripting.Dictionary)£º²å¼þ¶ÔÏó×Öµä
-**Ê¾Àý**£º
+**ç±»åž‹**ï¼šSub
+**è¯´æ˜Ž**ï¼šç”ŸæˆåŒ…å«é‡å¤æ–‡ä»¶æ£€æµ‹çš„HTMLæŠ¥å‘Š
+**å‚æ•°**ï¼š
+	pluginObj (Scripting.Dictionary)ï¼šæ’ä»¶å¯¹è±¡å­—å…¸
+**ç¤ºä¾‹**ï¼š
 plugins("html_report_generator")("GenerateHTMLReport") plugins("html_report_generator")

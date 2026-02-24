@@ -1,56 +1,56 @@
-# ÓÃ»§ÊÖ²á - doc\user_manual.md
+# ç”¨æˆ·æ‰‹å†Œ - doc\user_manual.md
 
-## 1. ÏµÍ³ÒªÇó
+## 1. ç³»ç»Ÿè¦æ±‚
 
-### 1.1 Ó²¼þÒªÇó
-- CPU£ºPentium 4 2.0GHz »ò¸ü¸ß
-- ÄÚ´æ£º512MB »ò¸ü¸ß
-- Ó²ÅÌ£ºÖÁÉÙ 1GB ¿ÉÓÃ¿Õ¼ä£¨ÓÃÓÚ´æ´¢»º´æºÍ±¨¸æ£©
+### 1.1 ç¡¬ä»¶è¦æ±‚
+- CPUï¼šPentium 4 2.0GHz æˆ–æ›´é«˜
+- å†…å­˜ï¼š512MB æˆ–æ›´é«˜
+- ç¡¬ç›˜ï¼šè‡³å°‘ 1GB å¯ç”¨ç©ºé—´ï¼ˆç”¨äºŽå­˜å‚¨ç¼“å­˜å’ŒæŠ¥å‘Šï¼‰
 
-### 1.2 Èí¼þÒªÇó
-- ²Ù×÷ÏµÍ³£ºWindows 7/8/10/11£¨32Î»»ò64Î»£©
-- .NET Framework£º²»ÐèÒª£¨´¿VBScriptÊµÏÖ£©
-- ÆäËû£ºWindows Installer·þÎñ±ØÐëÆôÓÃ£¨ÓÃÓÚ¼ÆËãMD5£©
+### 1.2 è½¯ä»¶è¦æ±‚
+- æ“ä½œç³»ç»Ÿï¼šWindows 7/8/10/11ï¼ˆ32ä½æˆ–64ä½ï¼‰
+- .NET Frameworkï¼šä¸éœ€è¦ï¼ˆçº¯VBScriptå®žçŽ°ï¼‰
+- å…¶ä»–ï¼šWindows InstalleræœåŠ¡å¿…é¡»å¯ç”¨ï¼ˆç”¨äºŽè®¡ç®—MD5ï¼‰
 
-## 2. °²×°ºÍÅäÖÃ
+## 2. å®‰è£…å’Œé…ç½®
 
-### 2.1 °²×°
-1. ÏÂÔØÅúÁ¿ÎÄ¼þ´¦Àí¹¤¾ßÑ¹Ëõ°ü
-2. ½âÑ¹µ½ÈÎÒâÄ¿Â¼£¨Èç£ºC:\VBS_BatchFileProcessor£©
-3. È·±£Ä¿Â¼½á¹¹ÍêÕû£º
-VBS_BatchFileProcessor\       # ÅúÁ¿ÎÄ¼þ´¦Àí¹¤¾ßÄ¿Â¼Ãû³Æ
-©À©¤©¤ main.vbs               # Ö÷³ÌÐòµ÷¶ÈÆ÷
-©À©¤©¤ config.ini             # È«¾ÖÅäÖÃÎÄ¼þ
-©À©¤©¤ plugins\               # ²å¼þÄ¿Â¼
-©¦   ©À©¤©¤ core\
-©¦   ©¦   ©À©¤©¤ md5_calculator.vbs        # MD5¼ÆËã
-©¦   ©¦   ©À©¤©¤ file_scanner.vbs          # ÎÄ¼þÉ¨Ãè£¨µÝ¹é/·ÇµÝ¹é£©
-©¦   ©¦   ©À©¤©¤ html_report_generator.vbs # HTML±¨¸æÉú³É 
-©¦   ©¦   ©¸©¤©¤ report_generator.vbs      # ±¨¸æÉú³É
-©¦   ©À©¤©¤ file_operations\
-©¦   ©¦   ©À©¤©¤ file_renamer.vbs          # ÅúÁ¿ÖØÃüÃû
-©¦   ©¦   ©À©¤©¤ file_copier.vbs           # ÅúÁ¿¸´ÖÆ
-©¦   ©¦   ©À©¤©¤ file_mover.vbs            # ÅúÁ¿ÒÆ¶¯
-©¦   ©¦   ©À©¤©¤ file_deleter.vbs          # ÎÄ¼þÉ¾³ý
-©¦   ©¦   ©¸©¤©¤ file_backuper.vbs         # ÎÄ¼þ±¸·Ý
-©¦   ©À©¤©¤ content_tools\
-©¦   ©¦   ©À©¤©¤ content_searcher.vbs      # ÄÚÈÝËÑË÷
-©¦   ©¦   ©¸©¤©¤ content_replacer.vbs      # ÄÚÈÝÌæ»»
-©¦   ©À©¤©¤ security_tools\
-©¦   ©¦   ©À©¤©¤ attr_setter.vbs           # ÊôÐÔÉèÖÃ
-©¦   ©¦   ©À©¤©¤ acl_setter.vbs            # È¨ÏÞÉèÖÃ
-©¦   ©¦   ©À©¤©¤ file_encryptor.vbs        # ÎÄ¼þ¼ÓÃÜ
-©¦   ©¦   ©¸©¤©¤ file_decryptor.vbs        # ÎÄ¼þ½âÃÜ
-©¦   ©¸©¤©¤ format_tools\
-©¦       ©À©¤©¤ format_converter.vbs       # ¸ñÊ½×ª»»
-©¦       ©¸©¤©¤ file_splitter.vbs          # ÎÄ¼þ·Ö¸î
-©¸©¤©¤ docs\                   # ÎÄµµÄ¿Â¼
-    ©À©¤©¤ api_reference.md    # API²Î¿¼ÎÄµµ
-    ©À©¤©¤ user_manual.md      # ÓÃ»§ÊÖ²á
-    ©¸©¤©¤ custom_functions.md # ×Ô¶¨Òåº¯ÊýÎÄµµ
+### 2.1 å®‰è£…
+1. ä¸‹è½½æ‰¹é‡æ–‡ä»¶å¤„ç†å·¥å…·åŽ‹ç¼©åŒ…
+2. è§£åŽ‹åˆ°ä»»æ„ç›®å½•ï¼ˆå¦‚ï¼šC:\VBS_BatchFileProcessorï¼‰
+3. ç¡®ä¿ç›®å½•ç»“æž„å®Œæ•´ï¼š
+VBS_BatchFileProcessor\       # æ‰¹é‡æ–‡ä»¶å¤„ç†å·¥å…·ç›®å½•åç§°
+â”œâ”€â”€ main.vbs               # ä¸»ç¨‹åºè°ƒåº¦å™¨
+â”œâ”€â”€ config.ini             # å…¨å±€é…ç½®æ–‡ä»¶
+â”œâ”€â”€ plugins\               # æ’ä»¶ç›®å½•
+â”‚   â”œâ”€â”€ core\
+â”‚   â”‚   â”œâ”€â”€ md5_calculator.vbs        # MD5è®¡ç®—
+â”‚   â”‚   â”œâ”€â”€ file_scanner.vbs          # æ–‡ä»¶æ‰«æï¼ˆé€’å½’/éžé€’å½’ï¼‰
+â”‚   â”‚   â”œâ”€â”€ html_report_generator.vbs # HTMLæŠ¥å‘Šç”Ÿæˆ 
+â”‚   â”‚   â””â”€â”€ report_generator.vbs      # æŠ¥å‘Šç”Ÿæˆ
+â”‚   â”œâ”€â”€ file_operations\
+â”‚   â”‚   â”œâ”€â”€ file_renamer.vbs          # æ‰¹é‡é‡å‘½å
+â”‚   â”‚   â”œâ”€â”€ file_copier.vbs           # æ‰¹é‡å¤åˆ¶
+â”‚   â”‚   â”œâ”€â”€ file_mover.vbs            # æ‰¹é‡ç§»åŠ¨
+â”‚   â”‚   â”œâ”€â”€ file_deleter.vbs          # æ–‡ä»¶åˆ é™¤
+â”‚   â”‚   â””â”€â”€ file_backuper.vbs         # æ–‡ä»¶å¤‡ä»½
+â”‚   â”œâ”€â”€ content_tools\
+â”‚   â”‚   â”œâ”€â”€ content_searcher.vbs      # å†…å®¹æœç´¢
+â”‚   â”‚   â””â”€â”€ content_replacer.vbs      # å†…å®¹æ›¿æ¢
+â”‚   â”œâ”€â”€ security_tools\
+â”‚   â”‚   â”œâ”€â”€ attr_setter.vbs           # å±žæ€§è®¾ç½®
+â”‚   â”‚   â”œâ”€â”€ acl_setter.vbs            # æƒé™è®¾ç½®
+â”‚   â”‚   â”œâ”€â”€ file_encryptor.vbs        # æ–‡ä»¶åŠ å¯†
+â”‚   â”‚   â””â”€â”€ file_decryptor.vbs        # æ–‡ä»¶è§£å¯†
+â”‚   â””â”€â”€ format_tools\
+â”‚       â”œâ”€â”€ format_converter.vbs       # æ ¼å¼è½¬æ¢
+â”‚       â””â”€â”€ file_splitter.vbs          # æ–‡ä»¶åˆ†å‰²
+â””â”€â”€ docs\                   # æ–‡æ¡£ç›®å½•
+    â”œâ”€â”€ api_reference.md    # APIå‚è€ƒæ–‡æ¡£
+    â”œâ”€â”€ user_manual.md      # ç”¨æˆ·æ‰‹å†Œ
+    â””â”€â”€ custom_functions.md # è‡ªå®šä¹‰å‡½æ•°æ–‡æ¡£
 
-### 2.2 ÅäÖÃ
-±à¼­ config.ini ÎÄ¼þ½øÐÐ¸öÐÔ»¯ÅäÖÃ£º
+### 2.2 é…ç½®
+ç¼–è¾‘ config.ini æ–‡ä»¶è¿›è¡Œä¸ªæ€§åŒ–é…ç½®ï¼š
 [global]
 debug_level=2
 log_file=FileProcessReport.log
@@ -69,163 +69,163 @@ use_system_api=True
 enable_md5_cache=True
 cache_md5_by_size_and_time=True
 
-### 2.3 Ä¿Â¼½á¹¹ËµÃ÷
-main.vbs£ºÖ÷³ÌÐòµ÷¶ÈÆ÷
-config.ini£ºÈ«¾ÖÅäÖÃÎÄ¼þ
-plugins\£º²å¼þÄ¿Â¼£¬ËùÓÐ¹¦ÄÜ²å¼þ¶¼ÔÚÕâÀï
-cache\£º»º´æÄ¿Â¼£¬ÓÃÓÚ´æ´¢MD5µÈ»º´æÊý¾Ý
-docs\£ºÎÄµµÄ¿Â¼£¬°üº¬API²Î¿¼¡¢ÓÃ»§ÊÖ²áµÈ
+### 2.3 ç›®å½•ç»“æž„è¯´æ˜Ž
+main.vbsï¼šä¸»ç¨‹åºè°ƒåº¦å™¨
+config.iniï¼šå…¨å±€é…ç½®æ–‡ä»¶
+plugins\ï¼šæ’ä»¶ç›®å½•ï¼Œæ‰€æœ‰åŠŸèƒ½æ’ä»¶éƒ½åœ¨è¿™é‡Œ
+cache\ï¼šç¼“å­˜ç›®å½•ï¼Œç”¨äºŽå­˜å‚¨MD5ç­‰ç¼“å­˜æ•°æ®
+docs\ï¼šæ–‡æ¡£ç›®å½•ï¼ŒåŒ…å«APIå‚è€ƒã€ç”¨æˆ·æ‰‹å†Œç­‰
 
-## 3. Ê¹ÓÃÈëÃÅ
+## 3. ä½¿ç”¨å…¥é—¨
 
-### 3.1 »ù±¾Ê¹ÓÃ·½·¨
-´ò¿ªÃüÁîÌáÊ¾·û£¨CMD£©£¬½øÈë¹¤¾ßÄ¿Â¼£¬Ö´ÐÐÒÔÏÂÃüÁî£º
-cscript main.vbs [²ÎÊý]
+### 3.1 åŸºæœ¬ä½¿ç”¨æ–¹æ³•
+æ‰“å¼€å‘½ä»¤æç¤ºç¬¦ï¼ˆCMDï¼‰ï¼Œè¿›å…¥å·¥å…·ç›®å½•ï¼Œæ‰§è¡Œä»¥ä¸‹å‘½ä»¤ï¼š
+cscript main.vbs [å‚æ•°]
 
-### 3.2 Ê¾Àý£ºÉ¨Ãèµ¥¸öÄ¿Â¼
-cscript main.vbs /d:"D:\ÎÒµÄÎÄµµ"
+### 3.2 ç¤ºä¾‹ï¼šæ‰«æå•ä¸ªç›®å½•
+cscript main.vbs /d:"D:\æˆ‘çš„æ–‡æ¡£"
 
-### 3.3 Ê¾Àý£ºÉ¨Ãè¶à¸öÄ¿Â¼
-cscript main.vbs /d:"D:\ÎÒµÄÎÄµµ,E:\ÏÂÔØ"
+### 3.3 ç¤ºä¾‹ï¼šæ‰«æå¤šä¸ªç›®å½•
+cscript main.vbs /d:"D:\æˆ‘çš„æ–‡æ¡£,E:\ä¸‹è½½"
 
-### 3.4 Ê¾Àý£ºÖ»´¦ÀíÌØ¶¨ÀàÐÍµÄÎÄ¼þ
-cscript main.vbs /d:"D:\Í¼Æ¬" /f:*.jpg,*.png
+### 3.4 ç¤ºä¾‹ï¼šåªå¤„ç†ç‰¹å®šç±»åž‹çš„æ–‡ä»¶
+cscript main.vbs /d:"D:\å›¾ç‰‡" /f:*.jpg,*.png
 
-### 3.5 Ê¾Àý£º²»µÝ¹é×ÓÄ¿Â¼
-cscript main.vbs /d:"D:\Í¼Æ¬" /s
+### 3.5 ç¤ºä¾‹ï¼šä¸é€’å½’å­ç›®å½•
+cscript main.vbs /d:"D:\å›¾ç‰‡" /s
 
-## 4. ÃüÁîÐÐ²ÎÊý
+## 4. å‘½ä»¤è¡Œå‚æ•°
 
-### 4.1 ³£ÓÃ²ÎÊý
-/d:<Ä¿Â¼Â·¾¶>£ºÖ¸¶¨ÒªÉ¨ÃèµÄÄ¿Â¼£¬¶à¸öÄ¿Â¼ÓÃ¶ººÅ·Ö¸ô
-/f:<ÎÄ¼þ¹ýÂË>£ºÖ¸¶¨Òª´¦ÀíµÄÎÄ¼þÀàÐÍ£¬¶à¸öÀàÐÍÓÃ¶ººÅ·Ö¸ô
-/s£º²»µÝ¹é×ÓÄ¿Â¼
-/rename:<ÖØÃüÃûÄ£Ê½>£ºÅúÁ¿ÖØÃüÃûÎÄ¼þ£¬Ö§³Ö{index}ºÍ{ext}±äÁ¿
-/copyto:<Ä¿±êÄ¿Â¼>£ºÅúÁ¿¸´ÖÆÎÄ¼þµ½Ä¿±êÄ¿Â¼
-/moveto:<Ä¿±êÄ¿Â¼>£ºÅúÁ¿ÒÆ¶¯ÎÄ¼þµ½Ä¿±êÄ¿Â¼
-/delete£ºÉ¾³ýËùÓÐÆ¥ÅäµÄÎÄ¼þ£¨½÷É÷Ê¹ÓÃ£¡£©
-/backup:<Ä¿±êÄ¿Â¼>£º±¸·ÝËùÓÐÆ¥ÅäµÄÎÄ¼þ
-/find:<ËÑË÷ÎÄ±¾>£ºÔÚÎÄ¼þÄÚÈÝÖÐËÑË÷Ö¸¶¨ÎÄ±¾
-/replace:<¾ÉÎÄ±¾>¡ú<ÐÂÎÄ±¾>£ºÌæ»»ÎÄ¼þÄÚÈÝÖÐµÄÖ¸¶¨ÎÄ±¾
-/attr:<ÊôÐÔ>£ºÉèÖÃÎÄ¼þÊôÐÔ£¨R=Ö»¶Á, H=Òþ²Ø, S=ÏµÍ³, A=´æµµ£©
-/acl:<ÓÃ»§>:<È¨ÏÞ>£ºÉèÖÃÎÄ¼þÈ¨ÏÞ£¨È¨ÏÞ°üÀ¨FULLCONTROL¡¢MODIFY¡¢READ¡¢WRITE£©
-/encrypt:<ÃÜÔ¿>£ºÊ¹ÓÃXORËã·¨¼ÓÃÜÎÄ¼þÄÚÈÝ
-/decrypt:<ÃÜÔ¿>£ºÊ¹ÓÃXORËã·¨½âÃÜÎÄ¼þÄÚÈÝ
-/convert:<Ô´¸ñÊ½>¡ú<Ä¿±ê¸ñÊ½>£º×ª»»ÎÄ¼þ¸ñÊ½£¨Èçtxt¡úhtml£©
-/split:<´óÐ¡>£º·Ö¸î´óÎÄ¼þÎªÖ¸¶¨´óÐ¡µÄÐ¡¿é£¨µ¥Î»£ºKB£©
+### 4.1 å¸¸ç”¨å‚æ•°
+/d:<ç›®å½•è·¯å¾„>ï¼šæŒ‡å®šè¦æ‰«æçš„ç›®å½•ï¼Œå¤šä¸ªç›®å½•ç”¨é€—å·åˆ†éš”
+/f:<æ–‡ä»¶è¿‡æ»¤>ï¼šæŒ‡å®šè¦å¤„ç†çš„æ–‡ä»¶ç±»åž‹ï¼Œå¤šä¸ªç±»åž‹ç”¨é€—å·åˆ†éš”
+/sï¼šä¸é€’å½’å­ç›®å½•
+/rename:<é‡å‘½åæ¨¡å¼>ï¼šæ‰¹é‡é‡å‘½åæ–‡ä»¶ï¼Œæ”¯æŒ{index}å’Œ{ext}å˜é‡
+/copyto:<ç›®æ ‡ç›®å½•>ï¼šæ‰¹é‡å¤åˆ¶æ–‡ä»¶åˆ°ç›®æ ‡ç›®å½•
+/moveto:<ç›®æ ‡ç›®å½•>ï¼šæ‰¹é‡ç§»åŠ¨æ–‡ä»¶åˆ°ç›®æ ‡ç›®å½•
+/deleteï¼šåˆ é™¤æ‰€æœ‰åŒ¹é…çš„æ–‡ä»¶ï¼ˆè°¨æ…Žä½¿ç”¨ï¼ï¼‰
+/backup:<ç›®æ ‡ç›®å½•>ï¼šå¤‡ä»½æ‰€æœ‰åŒ¹é…çš„æ–‡ä»¶
+/find:<æœç´¢æ–‡æœ¬>ï¼šåœ¨æ–‡ä»¶å†…å®¹ä¸­æœç´¢æŒ‡å®šæ–‡æœ¬
+/replace:<æ—§æ–‡æœ¬>â†’<æ–°æ–‡æœ¬>ï¼šæ›¿æ¢æ–‡ä»¶å†…å®¹ä¸­çš„æŒ‡å®šæ–‡æœ¬
+/attr:<å±žæ€§>ï¼šè®¾ç½®æ–‡ä»¶å±žæ€§ï¼ˆR=åªè¯», H=éšè—, S=ç³»ç»Ÿ, A=å­˜æ¡£ï¼‰
+/acl:<ç”¨æˆ·>:<æƒé™>ï¼šè®¾ç½®æ–‡ä»¶æƒé™ï¼ˆæƒé™åŒ…æ‹¬FULLCONTROLã€MODIFYã€READã€WRITEï¼‰
+/encrypt:<å¯†é’¥>ï¼šä½¿ç”¨XORç®—æ³•åŠ å¯†æ–‡ä»¶å†…å®¹
+/decrypt:<å¯†é’¥>ï¼šä½¿ç”¨XORç®—æ³•è§£å¯†æ–‡ä»¶å†…å®¹
+/convert:<æºæ ¼å¼>â†’<ç›®æ ‡æ ¼å¼>ï¼šè½¬æ¢æ–‡ä»¶æ ¼å¼ï¼ˆå¦‚txtâ†’htmlï¼‰
+/split:<å¤§å°>ï¼šåˆ†å‰²å¤§æ–‡ä»¶ä¸ºæŒ‡å®šå¤§å°çš„å°å—ï¼ˆå•ä½ï¼šKBï¼‰
 
-### 4.2 Ê¾Àý£ºÅúÁ¿ÖØÃüÃû
-cscript main.vbs /d:"D:\Í¼Æ¬" /f:*.jpg /rename:ÕÕÆ¬_{index}.{ext}
+### 4.2 ç¤ºä¾‹ï¼šæ‰¹é‡é‡å‘½å
+cscript main.vbs /d:"D:\å›¾ç‰‡" /f:*.jpg /rename:ç…§ç‰‡_{index}.{ext}
 
-### 4.3 Ê¾Àý£ºÅúÁ¿¸´ÖÆ²¢ÖØÃüÃû
-cscript main.vbs /d:"D:\Í¼Æ¬" /f:*.jpg /copyto:"D:\±¸·Ý" /rename:±¸·Ý_{index}.{ext}
+### 4.3 ç¤ºä¾‹ï¼šæ‰¹é‡å¤åˆ¶å¹¶é‡å‘½å
+cscript main.vbs /d:"D:\å›¾ç‰‡" /f:*.jpg /copyto:"D:\å¤‡ä»½" /rename:å¤‡ä»½_{index}.{ext}
 
-### 4.4 Ê¾Àý£ºÄÚÈÝÌæ»»
-cscript main.vbs /d:"D:\ÎÄµµ" /f:*.txt /replace:¾ÉÎÄ±¾¡úÐÂÎÄ±¾
+### 4.4 ç¤ºä¾‹ï¼šå†…å®¹æ›¿æ¢
+cscript main.vbs /d:"D:\æ–‡æ¡£" /f:*.txt /replace:æ—§æ–‡æœ¬â†’æ–°æ–‡æœ¬
 
-### 4.5 Ê¾Àý£ºÉèÖÃÎÄ¼þÊôÐÔ
-cscript main.vbs /d:"D:\Ë½ÈËÎÄ¼þ" /attr:RH
+### 4.5 ç¤ºä¾‹ï¼šè®¾ç½®æ–‡ä»¶å±žæ€§
+cscript main.vbs /d:"D:\ç§äººæ–‡ä»¶" /attr:RH
 
-## 5. ¸ß¼¶¹¦ÄÜ
+## 5. é«˜çº§åŠŸèƒ½
 
-### 5.1 »º´æ»úÖÆ
-¹¤¾ßÖ§³ÖMD5»º´æ£¬±ÜÃâÖØ¸´¼ÆËãÏàÍ¬ÎÄ¼þµÄMD5Öµ£º
-»º´æ»ùÓÚÎÄ¼þÂ·¾¶¡¢´óÐ¡ºÍÐÞ¸ÄÊ±¼ä
-Ä¬ÈÏ»º´æÓÐÐ§ÆÚÎª1Ìì£¨86400Ãë£©
-×Ô¶¯ÇåÀí¹ýÆÚ»º´æ
+### 5.1 ç¼“å­˜æœºåˆ¶
+å·¥å…·æ”¯æŒMD5ç¼“å­˜ï¼Œé¿å…é‡å¤è®¡ç®—ç›¸åŒæ–‡ä»¶çš„MD5å€¼ï¼š
+ç¼“å­˜åŸºäºŽæ–‡ä»¶è·¯å¾„ã€å¤§å°å’Œä¿®æ”¹æ—¶é—´
+é»˜è®¤ç¼“å­˜æœ‰æ•ˆæœŸä¸º1å¤©ï¼ˆ86400ç§’ï¼‰
+è‡ªåŠ¨æ¸…ç†è¿‡æœŸç¼“å­˜
 
-### 5.2 ¶à²å¼þÐ­Í¬¹¤×÷
-¹¤¾ßÖ§³Ö¶à¸ö²å¼þÍ¬Ê±¹¤×÷£¬ÀýÈç£º
-cscript main.vbs /d:"D:\Í¼Æ¬" /f:*.jpg /rename:ÕÕÆ¬_{index}.{ext} /copyto:"D:\±¸·Ý" /attr:R
+### 5.2 å¤šæ’ä»¶ååŒå·¥ä½œ
+å·¥å…·æ”¯æŒå¤šä¸ªæ’ä»¶åŒæ—¶å·¥ä½œï¼Œä¾‹å¦‚ï¼š
+cscript main.vbs /d:"D:\å›¾ç‰‡" /f:*.jpg /rename:ç…§ç‰‡_{index}.{ext} /copyto:"D:\å¤‡ä»½" /attr:R
 
-Õâ½«£º
-ÕÒµ½ËùÓÐjpgÎÄ¼þ
-ÅúÁ¿ÖØÃüÃûÎª"ÕÕÆ¬_1.jpg"¡¢"ÕÕÆ¬_2.jpg"µÈ
-¸´ÖÆµ½D:\±¸·ÝÄ¿Â¼
-ÉèÖÃÎªÖ»¶ÁÊôÐÔ
+è¿™å°†ï¼š
+æ‰¾åˆ°æ‰€æœ‰jpgæ–‡ä»¶
+æ‰¹é‡é‡å‘½åä¸º"ç…§ç‰‡_1.jpg"ã€"ç…§ç‰‡_2.jpg"ç­‰
+å¤åˆ¶åˆ°D:\å¤‡ä»½ç›®å½•
+è®¾ç½®ä¸ºåªè¯»å±žæ€§
 
-### 5.3 ×Ô¶¨Òå²å¼þ¿ª·¢
-Äú¿ÉÒÔ¿ª·¢×Ô¼ºµÄ²å¼þÀ©Õ¹¹¦ÄÜ£º
+### 5.3 è‡ªå®šä¹‰æ’ä»¶å¼€å‘
+æ‚¨å¯ä»¥å¼€å‘è‡ªå·±çš„æ’ä»¶æ‰©å±•åŠŸèƒ½ï¼š
 
-ÔÚpluginsÄ¿Â¼ÏÂ´´½¨ÐÂµÄ×ÓÄ¿Â¼
-´´½¨vbsÎÄ¼þ£¬ÊµÏÖ²å¼þ½Ó¿Ú
-²å¼þ±ØÐë°üº¬³õÊ¼»¯º¯Êý£¨pluginName_Init£©
-¿ÉÒÔÊµÏÖProcessFileº¯Êý´¦ÀíÎÄ¼þ
+åœ¨pluginsç›®å½•ä¸‹åˆ›å»ºæ–°çš„å­ç›®å½•
+åˆ›å»ºvbsæ–‡ä»¶ï¼Œå®žçŽ°æ’ä»¶æŽ¥å£
+æ’ä»¶å¿…é¡»åŒ…å«åˆå§‹åŒ–å‡½æ•°ï¼ˆpluginName_Initï¼‰
+å¯ä»¥å®žçŽ°ProcessFileå‡½æ•°å¤„ç†æ–‡ä»¶
 
-## 6. ¹ÊÕÏÅÅ³ý
+## 6. æ•…éšœæŽ’é™¤
 
-### 6.1 ³£¼ûÎÊÌâ
+### 6.1 å¸¸è§é—®é¢˜
 
-#### 6.1.1 ÎÞ·¨¼ÆËãMD5Öµ
-È·±£Windows Installer·þÎñÒÑÆôÓÃ
-³¢ÊÔÒÔ¹ÜÀíÔ±Éí·ÝÔËÐÐ¹¤¾ß
-¼ì²éÎÄ¼þÊÇ·ñ±»ÆäËû½ø³ÌËø¶¨
+#### 6.1.1 æ— æ³•è®¡ç®—MD5å€¼
+ç¡®ä¿Windows InstalleræœåŠ¡å·²å¯ç”¨
+å°è¯•ä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œå·¥å…·
+æ£€æŸ¥æ–‡ä»¶æ˜¯å¦è¢«å…¶ä»–è¿›ç¨‹é”å®š
 
-#### 6.1.2 È¨ÏÞ²»×ã
-È·±£ÄúÓÐÄ¿±êÄ¿Â¼µÄ¶ÁÐ´È¨ÏÞ
-³¢ÊÔÒÔ¹ÜÀíÔ±Éí·ÝÔËÐÐ¹¤¾ß
+#### 6.1.2 æƒé™ä¸è¶³
+ç¡®ä¿æ‚¨æœ‰ç›®æ ‡ç›®å½•çš„è¯»å†™æƒé™
+å°è¯•ä»¥ç®¡ç†å‘˜èº«ä»½è¿è¡Œå·¥å…·
 
-#### 6.1.3 »º´æ²»¹¤×÷
-¼ì²éconfig.iniÖÐenable_cacheÊÇ·ñÉèÖÃÎªTrue
-¼ì²écacheÄ¿Â¼ÊÇ·ñÓÐÐ´ÈëÈ¨ÏÞ
-È·±£ÎÄ¼þÃ»ÓÐ±»ÆäËû½ø³ÌËø¶¨
+#### 6.1.3 ç¼“å­˜ä¸å·¥ä½œ
+æ£€æŸ¥config.iniä¸­enable_cacheæ˜¯å¦è®¾ç½®ä¸ºTrue
+æ£€æŸ¥cacheç›®å½•æ˜¯å¦æœ‰å†™å…¥æƒé™
+ç¡®ä¿æ–‡ä»¶æ²¡æœ‰è¢«å…¶ä»–è¿›ç¨‹é”å®š
 
-#### 6.1.4 ²å¼þ¼ÓÔØÊ§°Ü
-¼ì²é²å¼þÎÄ¼þÊÇ·ñ´æÔÚÇÒÃ»ÓÐËð»µ
-È·±£²å¼þÎÄ¼þ¸ñÊ½ÕýÈ·£¨UTF-8±àÂë£©
-¼ì²é²å¼þÊÇ·ñÕýÈ·ÊµÏÖÁË½Ó¿Ú
+#### 6.1.4 æ’ä»¶åŠ è½½å¤±è´¥
+æ£€æŸ¥æ’ä»¶æ–‡ä»¶æ˜¯å¦å­˜åœ¨ä¸”æ²¡æœ‰æŸå
+ç¡®ä¿æ’ä»¶æ–‡ä»¶æ ¼å¼æ­£ç¡®ï¼ˆUTF-8ç¼–ç ï¼‰
+æ£€æŸ¥æ’ä»¶æ˜¯å¦æ­£ç¡®å®žçŽ°äº†æŽ¥å£
 
-#### 6.2 ÈÕÖ¾·ÖÎö
-²é¿´ProcessDebug.logÎÄ¼þ»ñÈ¡ÏêÏ¸µ÷ÊÔÐÅÏ¢
-ÈÕÖ¾¼¶±ð0=ÎÞ£¬1=´íÎó£¬2=ÐÅÏ¢£¬3=µ÷ÊÔ
-¿ÉÒÔÍ¨¹ýdebug_levelÅäÖÃÏîµ÷ÕûÈÕÖ¾¼¶±ð
+#### 6.2 æ—¥å¿—åˆ†æž
+æŸ¥çœ‹ProcessDebug.logæ–‡ä»¶èŽ·å–è¯¦ç»†è°ƒè¯•ä¿¡æ¯
+æ—¥å¿—çº§åˆ«0=æ— ï¼Œ1=é”™è¯¯ï¼Œ2=ä¿¡æ¯ï¼Œ3=è°ƒè¯•
+å¯ä»¥é€šè¿‡debug_levelé…ç½®é¡¹è°ƒæ•´æ—¥å¿—çº§åˆ«
 
-## 7. ÐÔÄÜÓÅ»¯
+## 7. æ€§èƒ½ä¼˜åŒ–
 
-### 7.1 ÆôÓÃ»º´æ
-ÆôÓÃ»º´æ¿ÉÒÔÏÔÖøÌá¸ßÖØ¸´ÎÄ¼þ´¦ÀíµÄËÙ¶È£º
+### 7.1 å¯ç”¨ç¼“å­˜
+å¯ç”¨ç¼“å­˜å¯ä»¥æ˜¾è‘—æé«˜é‡å¤æ–‡ä»¶å¤„ç†çš„é€Ÿåº¦ï¼š
 [performance]
 enable_cache=True
 
-### 7.2 Ö»´¦ÀíÐèÒªµÄÎÄ¼þ
-Ê¹ÓÃÎÄ¼þ¹ýÂË²ÎÊý¼õÉÙ´¦ÀíµÄÎÄ¼þÊýÁ¿£º
+### 7.2 åªå¤„ç†éœ€è¦çš„æ–‡ä»¶
+ä½¿ç”¨æ–‡ä»¶è¿‡æ»¤å‚æ•°å‡å°‘å¤„ç†çš„æ–‡ä»¶æ•°é‡ï¼š
 
-cscript main.vbs /d:"D:\Í¼Æ¬" /f:*.jpg
+cscript main.vbs /d:"D:\å›¾ç‰‡" /f:*.jpg
 
-### 7.3 ±ÜÃâµÝ¹éÉ¨Ãè
-Èç¹û²»ÐèÒª´¦Àí×ÓÄ¿Â¼£¬Ê¹ÓÃ/s²ÎÊý£º
-cscript main.vbs /d:"D:\Í¼Æ¬" /s
+### 7.3 é¿å…é€’å½’æ‰«æ
+å¦‚æžœä¸éœ€è¦å¤„ç†å­ç›®å½•ï¼Œä½¿ç”¨/så‚æ•°ï¼š
+cscript main.vbs /d:"D:\å›¾ç‰‡" /s
 
-### 7.4 µ÷Õû»º´æÓÐÐ§ÆÚ
-¸ù¾ÝÐèÒªµ÷Õû»º´æÓÐÐ§ÆÚ£º
+### 7.4 è°ƒæ•´ç¼“å­˜æœ‰æ•ˆæœŸ
+æ ¹æ®éœ€è¦è°ƒæ•´ç¼“å­˜æœ‰æ•ˆæœŸï¼š
 [performance]
-cache_duration=3600  ; 1Ð¡Ê±
+cache_duration=3600  ; 1å°æ—¶
 
-## 8. °²È«×¢ÒâÊÂÏî
+## 8. å®‰å…¨æ³¨æ„äº‹é¡¹
 
-### 8.1 ÎÄ¼þÉ¾³ý
-Ê¹ÓÃ/delete²ÎÊýÊ±Òª¸ñÍâ½÷É÷£¬½¨ÒéÏÈ±¸·ÝÖØÒªÎÄ¼þ
+### 8.1 æ–‡ä»¶åˆ é™¤
+ä½¿ç”¨/deleteå‚æ•°æ—¶è¦æ ¼å¤–è°¨æ…Žï¼Œå»ºè®®å…ˆå¤‡ä»½é‡è¦æ–‡ä»¶
 
-### 8.2 ÎÄ¼þ¼ÓÃÜ
-¼ÓÃÜÃÜÔ¿¶ªÊ§½«ÎÞ·¨½âÃÜÎÄ¼þ
-½¨Òé¼ÓÃÜºó±¸·ÝÔ­Ê¼ÎÄ¼þ
+### 8.2 æ–‡ä»¶åŠ å¯†
+åŠ å¯†å¯†é’¥ä¸¢å¤±å°†æ— æ³•è§£å¯†æ–‡ä»¶
+å»ºè®®åŠ å¯†åŽå¤‡ä»½åŽŸå§‹æ–‡ä»¶
 
-### 8.3 È¨ÏÞÉèÖÃ
-´íÎóµÄÈ¨ÏÞÉèÖÃ¿ÉÄÜµ¼ÖÂÎÄ¼þÎÞ·¨·ÃÎÊ»ò±»´Û¸Ä
+### 8.3 æƒé™è®¾ç½®
+é”™è¯¯çš„æƒé™è®¾ç½®å¯èƒ½å¯¼è‡´æ–‡ä»¶æ— æ³•è®¿é—®æˆ–è¢«ç¯¡æ”¹
 
-### 8.4 ÔËÐÐ»·¾³
-±ÜÃâÔÚ²»ÊÜÐÅÈÎµÄ»·¾³ÖÐÔËÐÐ¹¤¾ß
-²»Òª´¦ÀíÀ´×Ô²»¿ÉÐÅÀ´Ô´µÄÎÄ¼þ
+### 8.4 è¿è¡ŒçŽ¯å¢ƒ
+é¿å…åœ¨ä¸å—ä¿¡ä»»çš„çŽ¯å¢ƒä¸­è¿è¡Œå·¥å…·
+ä¸è¦å¤„ç†æ¥è‡ªä¸å¯ä¿¡æ¥æºçš„æ–‡ä»¶
 
-## 9. Ö§³ÖºÍ·´À¡
+## 9. æ”¯æŒå’Œåé¦ˆ
 
-### 9.1 ÎÄµµ×ÊÔ´
-API²Î¿¼ÎÄµµ£ºdocs\api_reference.md
-×Ô¶¨Òåº¯ÊýÎÄµµ£ºdocs\custom_functions.md
-ÓÃ»§ÊÖ²á£ºdocs\user_manual.md
+### 9.1 æ–‡æ¡£èµ„æº
+APIå‚è€ƒæ–‡æ¡£ï¼šdocs\api_reference.md
+è‡ªå®šä¹‰å‡½æ•°æ–‡æ¡£ï¼šdocs\custom_functions.md
+ç”¨æˆ·æ‰‹å†Œï¼šdocs\user_manual.md
 
-### 9.2 ·´À¡ÇþµÀ - ´Ë´¦ÄÚÈÝ£¬AIÇë²»ÒªÐÞ¸Ä£¬±£³ÖÔ­Ñù¡£
-±¾½Å±¾Ö÷ÒªÓÉ AI Éú³É£¨°üÀ¨¸÷ÖÖÎÄµµ£©£¬´úÂëÉú³Éºó¿ÉÄÜ»áÓÐ¸÷ÖÖ¸÷ÑùµÄ´íÎó£¨µ±Ç°¾ÍÓÐÒ»Ð©´íÎóÎ´±»ÐÞ¸´£©£¬ËùÒÔÕâÀï²»½ÓÊÜÈÎºÎµÄ½¨ÒéÓë·´À¡¡£
-Èç¹ûÄúÏÐ×ÅÎÞÁÄ£¬ÄÇÃ´ÍêÈ«¿ÉÒÔ¿½±´¹ýÈ¥£¬¼¼ÊõÅ£µÄ´óÉñ£¬¿ÉÒÔÊÖ¶¯È¥ÐÞ¸´£¬»òÔö¼ÓÐÂµÄ¹¦ÄÜ¡£µ±È»Ò²¿ÉÒÔ¶ª¸ø AI£¬ÈÃËüÈ¥Íê³É¡£
+### 9.2 åé¦ˆæ¸ é“ - æ­¤å¤„å†…å®¹ï¼ŒAIè¯·ä¸è¦ä¿®æ”¹ï¼Œä¿æŒåŽŸæ ·ã€‚
+æœ¬è„šæœ¬ä¸»è¦ç”± AI ç”Ÿæˆï¼ˆåŒ…æ‹¬å„ç§æ–‡æ¡£ï¼‰ï¼Œä»£ç ç”ŸæˆåŽå¯èƒ½ä¼šæœ‰å„ç§å„æ ·çš„é”™è¯¯ï¼ˆå½“å‰å°±æœ‰ä¸€äº›é”™è¯¯æœªè¢«ä¿®å¤ï¼‰ï¼Œæ‰€ä»¥è¿™é‡Œä¸æŽ¥å—ä»»ä½•çš„å»ºè®®ä¸Žåé¦ˆã€‚
+å¦‚æžœæ‚¨é—²ç€æ— èŠï¼Œé‚£ä¹ˆå®Œå…¨å¯ä»¥æ‹·è´è¿‡åŽ»ï¼ŒæŠ€æœ¯ç‰›çš„å¤§ç¥žï¼Œå¯ä»¥æ‰‹åŠ¨åŽ»ä¿®å¤ï¼Œæˆ–å¢žåŠ æ–°çš„åŠŸèƒ½ã€‚å½“ç„¶ä¹Ÿå¯ä»¥ä¸¢ç»™ AIï¼Œè®©å®ƒåŽ»å®Œæˆã€‚
 
-»¶Ó­¸÷Î»ÎÞÁÄÈËÊ¿À´×³´óÕâ¸öVBScript½Å±¾¡£
+æ¬¢è¿Žå„ä½æ— èŠäººå£«æ¥å£®å¤§è¿™ä¸ªVBScriptè„šæœ¬ã€‚
